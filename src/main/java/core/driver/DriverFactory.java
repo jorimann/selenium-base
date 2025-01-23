@@ -28,6 +28,8 @@ public class DriverFactory {
         if (null == browser) {
             LOGGER.error("browser parameter is null");
             throw new IllegalArgumentException("browser parameter is null");
+        } else {
+            LOGGER.info("browser parameter is: {}", browser);
         }
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

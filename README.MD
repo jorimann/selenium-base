@@ -36,6 +36,8 @@ The framework provides examples for implementing custom waiters and JavaScript-b
 2. Set required test settings in file /src/test/resources/config-default.properties
 3. Run tests using Gradle:
 `   ./gradlew clean test allureServe`
+4. Or you can overwrite params explicitly setting them in command line:
+   `   ./gradlew clean test allureServe -Dbrowser=chrome`
 
 ## Future Improvements:
 1. Add support of DB interaction.
