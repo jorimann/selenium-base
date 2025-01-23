@@ -33,7 +33,8 @@ The framework provides examples for implementing custom waiters and JavaScript-b
 1. Clone the repository:
 `   git clone <repository-url>
    cd <repository-directory>`
-2. Run tests using Gradle:
+2. Set required test settings in file /src/test/resources/config-default.properties
+3. Run tests using Gradle:
 `   ./gradlew clean test allureServe`
 
 ## Future Improvements:
