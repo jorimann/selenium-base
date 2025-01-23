@@ -1,0 +1,59 @@
+plugins {
+  id 'java'
+  id 'io.qameta.allure' version '2.12.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  allureVersion = '2.29.0'
+  junitVersion = '5.11.3'
+  seleniumVersion = '4.28.0'
+  assertjVersion = '3.26.3'
+  logbackVersion = '1.5.15'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+dependencies {
+  implementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
+  testImplementation("org.assertj:assertj-core:${assertjVersion}")
+  implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+
+  implementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+  implementation 'org.aeonbits.owner:owner:1.0.12'
+  implementation platform("io.qameta.allure:allure-bom:$allureVersion")
+  implementation "io.qameta.allure:allure-junit5"
+
+}
+
+test {
+  systemProperties(System.getProperties())
+  ignoreFailures = true
+  useJUnitPlatform()
+  testLogging {
+    showStandardStreams = true
+    events "passed", "failed", "skipped", "standardOut", "standardError"
+  }
+}
+
+allure {
+  version = "${allureVersion}"
+
+useJUnit5 {
+    version = "${allureVersion}"
+  }}
+
+configurations {
+  agent {
+    canBeResolved = true
+    canBeConsumed = true
+  }
+}
