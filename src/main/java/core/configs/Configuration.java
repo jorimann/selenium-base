@@ -33,4 +33,16 @@ public interface Configuration extends Config {
 
     @Key("hub.browser.version")
     String hubBrowserVersion();
+
+    @Key("db.jdbc.url")
+    String dbJdbcUrl();
+
+    @Key("db.username")
+    String dbUsername();
+
+    @Key("db.password")
+    String dbPassword();
+
+    @Key("api.baseUrl")
+    String apiBaseUrl();
 }

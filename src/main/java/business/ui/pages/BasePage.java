@@ -1,6 +1,6 @@
-package business.pages;
+package business.ui.pages;
 
-import business.fragments.LeftMenu;
+import business.ui.fragments.LeftMenu;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;

@@ -1,8 +1,8 @@
-package tests;
+package tests.web;
 
-import business.BaseTest;
-import business.pages.DynamicPropertiesPage;
-import business.pages.MainPage;
+import business.ui.BaseTest;
+import business.ui.pages.DynamicPropertiesPage;
+import business.ui.pages.MainPage;
 import io.qameta.allure.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

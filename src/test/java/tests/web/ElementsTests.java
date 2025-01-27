@@ -1,9 +1,9 @@
-package tests;
+package tests.web;
 
-import business.BaseTest;
+import business.ui.BaseTest;
 import io.qameta.allure.*;
 import org.assertj.core.api.Assertions;
-import business.pages.MainPage;
+import business.ui.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

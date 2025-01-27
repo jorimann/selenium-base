@@ -1,7 +1,7 @@
-package business;
+package business.ui;
 
 import core.driver.DriverFactory;
-import core.reporting.ScreenshotExtension;
+import extension.AfterTestExecutionExtension;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
@@ -13,7 +13,7 @@ import static core.configs.ConfigurationManager.config;
 import static core.driver.DriverManager.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@ExtendWith(ScreenshotExtension.class)
+@ExtendWith(AfterTestExecutionExtension.class)
 public abstract class BaseTest {
     Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
 

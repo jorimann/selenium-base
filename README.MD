@@ -21,6 +21,8 @@ The framework is designed with a modular and scalable structure, supporting the 
 - **Selenium Page Factory**: Utilizes Selenium's default `@FindBy` annotations for easier element location.
 - **Parallel Test Execution**: JUnit 5 support for running tests in parallel on a per-class level for faster execution.
 - **Allure Reporting**: Default Allure reporting allowing to generate reports with comprehensive information based on test results.
+- **API Testing**: Integrated RestAssured API library
+- **DB Integration**: DB Connections pool implemented with help of Hikari library
 ---
 
 ### Additional Notes:
@@ -39,10 +41,8 @@ The framework provides examples for implementing custom waiters and JavaScript-b
 4. Or you can overwrite params explicitly setting them in command line:
    `   ./gradlew clean test allureServe -Dbrowser=chrome`
 
-## Future Improvements:
-1. Add support of DB interaction.
-2. DI for DriverManager (currently it is implemented with Singleton).
-3. Add support of API tests.
-4. Add support of Mocks.
-5. It might be extended with Selenide library.
-6. Support of External Running labs like Browserstack or dockerized containers.
+## Future but not obligatory Improvements:
+1. DI for DriverManager (currently it is implemented with Singleton).
+2. Add support of Mocks.
+3. It might be extended with Selenide library.
+4. Support of External Running labs like Browserstack or dockerized containers.
